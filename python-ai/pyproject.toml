@@ -1,0 +1,16 @@
+[project]
+name = "project_name"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+dependencies = [
+    "sqlalchemy",
+    "psycopg[binary]",
+    "pandas",
+    "requests",
+    "beautifulsoup4",
+    "playwright",
+    "openai",
+    "python-dotenv",
+    "pydantic"
+]
