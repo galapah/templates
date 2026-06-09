@@ -3,14 +3,15 @@ name = "project_name"
 version = "0.1.0"
 requires-python = ">=3.12"
 
-dependencies = [
-    "sqlalchemy",
-    "psycopg[binary]",
-    "pandas",
-    "requests",
-    "beautifulsoup4",
-    "playwright",
-    "openai",
-    "python-dotenv",
-    "pydantic"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+    "ruff",
+    "pytest",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

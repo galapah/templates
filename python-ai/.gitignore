@@ -83,7 +83,8 @@ temp/
 # Downloaded or generated data
 # ============================================================
 
-data/raw/
+data/raw/*
+!data/raw/.gitkeep
 data/interim/
 data/external/
 

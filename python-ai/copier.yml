@@ -1,0 +1,46 @@
+project_name:
+  type: str
+  help: Human-readable project name
+
+project_slug:
+  type: str
+  help: Python package name
+  default: "{{ project_name.lower().replace('-', '_').replace(' ', '_') }}"
+
+project_description:
+  type: str
+  help: Short project description
+  default: Python project for scraping, database work, and AI workflows.
+
+author_name:
+  type: str
+  help: Author name
+  default: Jan Hapala
+
+ai_provider:
+  type: str
+  help: Which AI provider should this project use?
+  default: none
+  choices:
+    none: none
+    OpenAI: openai
+    Anthropic: anthropic
+    Local Ollama: ollama
+    Generic OpenAI-compatible API: openai_compatible
+
+use_postgres:
+  type: bool
+  help: Include PostgreSQL dependencies and SQL folders?
+  default: true
+
+use_playwright:
+  type: bool
+  help: Include Playwright for browser scraping?
+  default: true
+
+use_docker:
+  type: bool
+  help: Include Docker files?
+  default: false
+
+_templates_suffix: .jinja
